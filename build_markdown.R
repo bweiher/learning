@@ -1,56 +1,49 @@
-
 library(tidyverse)
 library(glue)
 
-
-list.files("links") %>% 
-  str_subset("\\.URL$") -> urls
-
-
-# read.csv(urls[1], stringsAsFactors = FALSE) %>% 
-#   as_tibble()
-
-links <- map_df(seq_along(urls), function(x){
-  
-  this_url <- urls[x]
-  
-  glue("links/{this_url}") %>% 
-    read.csv(stringsAsFactors = FALSE) %>% 
-    as_tibble() %>%
-    setNames("col") %>% 
-    filter(
-      str_detect(col, "URL")
-    ) %>% 
-    mutate(
-      col = str_replace_all(col, "^URL=", ""),
-      x =  x
-    ) 
-  
-  
-})
+urls <- paste0("links/", list.files("links") %>% 
+  str_subset("\\.URL$"))
 
 
-data <- tibble(
-  urls = urls
-) %>% 
-  mutate(
-    x = row_number()
+get_url <- function(url){
+  read.csv(url, stringsAsFactors = FALSE) %>% 
+  as_tibble() %>%
+  setNames("col") %>% 
+  filter(
+    str_detect(col, "URL")
   ) %>% 
-  inner_join(links, by = "x")
+    mutate(col  = str_replace_all(col, "URL=", "")) %>% 
+    pull(col)
+}
+
+get_url_safely <- safely(get_url, otherwise = NA_character_)
+
+df <- map_df(urls, function(x){
+    
+    print(x)
+  
+    fs::file_info(x) %>% 
+    as_tibble() %>% 
+    mutate(type=as.character(type),
+           path=as.character(path),
+           permissions=as.character(permissions),
+           size=as.character(size),
+           url =  get_url_safely(x)$result
+    )  
+
+}) %>% 
+  arrange(desc(modification_time))
 
 
-
-
-data %>% 
-  mutate(
-    urls = str_replace_all(urls, "\\.URL$", ""), #,
-    output =  glue("* [{urls}]({col})")
-  ) %>% 
-  pull(output) -> markdown_links
+markdown <- df %>%
+  filter(!is.na(url)) %>% 
+  transmute(name = str_replace_all(path, "^links/", ""), url) %>% 
+  mutate(x = glue("* [{name}]({url})")) %>%
+  pull(x)
 
 
 c("## Learning \n",
-  as.character(markdown_links)
+  as.character(markdown)
 ) -> lines
 
 
