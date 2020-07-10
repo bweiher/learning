@@ -1,5 +1,12 @@
 ## Learning 
 
+* [Learning Statistics with R.URL](https://learningstatisticswithr.com/)
+* [Adventures in R.URL](https://www.adventures-in-r.com/)
+* [tidylogREADME.md at master · elbersbtidylog · GitHub.URL](https://github.com/elbersb/tidylog/blob/master/README.md)
+* [Data, Code and Visualization The tale of two charts combined.URL](http://jkunst.com/blog/posts/2020-06-15-when-2-charts-are-more-than-1/)
+* [Deploying R Models with MLflow and Docker - mdneuzerling.URL](https://mdneuzerling.com/post/deploying-r-models-with-mlflow-and-docker/)
+* [a ggplot2 grammar guide.URL](https://evamaerey.github.io/ggplot2_grammar_guide/about)
+* [ExPThinkWeek2009Public.pdf.URL](https://ai.stanford.edu/~ronnyk/ExPThinkWeek2009Public.pdf)
 * [Tune XGBoost with tidymodels and #TidyTuesday beach volleyball Julia Silge.URL](https://juliasilge.com/blog/xgboost-tune-volleyball/)
 * [CRAN - Package pluralize.URL](https://cran.r-project.org/web/packages/pluralize/index.html)
 * [Announcing tidybayes and ggdist 2.1 - Matthew Kay - Blog.URL](http://blog.mjskay.com/2020/06/14/tidybayes-ggdist/)
