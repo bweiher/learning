@@ -48,11 +48,12 @@ md <- map(seq_along(dirs), function(g){
     links <- links_df %>% 
     arrange(desc(modification_time)) %>% 
     filter(!is.na(url)) %>% 
+    select(path, url) %>% 
     transmute(
-      name = str_replace_all(path, glue("^links/|{dirs_collapsed}"), ""), 
+      name = str_replace_all(path, glue("^links/{dir}/"), ""), 
       url) %>% 
     mutate(
-      name = str_remove_all(name, "^/"),
+      name = str_remove_all(name, "\\.URL"),
       x = glue("* [{name}]({url})") %>% 
         str_remove_all('\\.URL')
       ) %>% 

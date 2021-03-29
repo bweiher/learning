@@ -3,11 +3,14 @@
 
 
 ### Data Visualization
-* [data visualization/JavaScript for R](https://book.javascript-for-r.com/)
-* [data visualization/JavaScript Date Reference](https://www.w3schools.com/jsref/jsref_obj_date.asp)
-* [data visualization/GitHub - wchextrafont Tools for using fonts in R graphics](https://github.com/wch/extrafont)
-* [data visualization/GitHub - kcf-jacksonjsReact R package Modelling in R. Interactivity in JS. Best of both worlds.](https://github.com/kcf-jackson/jsReact/?utm_content=bufferfce6f&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
-* [data visualization/GitHub - andrewsalishinycssloaders Add CSS loader animations to Shiny outputs](https://github.com/andrewsali/shinycssloaders)
+* [JavaScript for R](https://book.javascript-for-r.com/)
+* [JavaScript Date Reference](https://www.w3schools.com/jsref/jsref_obj_date.asp)
+* [GitHub - wchextrafont Tools for using fonts in R graphics](https://github.com/wch/extrafont)
+* [GitHub - kcf-jacksonjsReact R package Modelling in R. Interactivity in JS. Best of both worlds.](https://github.com/kcf-jackson/jsReact/?utm_content=bufferfce6f&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+* [GitHub - andrewsalishinycssloaders Add CSS loader animations to Shiny outputs](https://github.com/andrewsali/shinycssloaders)
+
+
+### Non Data
 
 
 ### Other
@@ -75,6 +78,11 @@
 
 
 ### Papers
+* [Trustworthy Analysis of Online AB Tests Pitfalls,challenges and solutions](http://alexdeng.github.io/public/files/wsdm2017-rup.pdf)
+* [Controlled experiments on the web survey and practical guide SpringerLink](https://link.springer.com/article/10.1007/s10618-008-0114-1)
+* [Applying the Delta Method in Metric Analytics A Practical Guide with Novel Ideas - 1803.06336.pdf](https://arxiv.org/pdf/1803.06336.pdf)
+* [[1304.7406] Uncertainty in Online Experiments with Dependent Data An Evaluation of Bootstrap Methods](https://arxiv.org/abs/1304.7406)
+* [Why We (Usually) Don't Have to Worry About Multiple Comparisons - multiple2f.pdf](http://www.stat.columbia.edu/~gelman/research/published/multiple2f.pdf)
 * [Choice of the Randomization Unit in Online Controlled Experiment](https://alexdeng.github.io/public/files/jsm2011-deng.pdf)
 * [How Booking.com increases the power of online experiments with CUPED by Simon Jackson Booking.com Data Science](https://booking.ai/how-booking-com-increases-the-power-of-online-experiments-with-cuped-995d186fff1d)
 * [Improving the Sensitivity of Online ControlledExperiments Case Studies at Netflix](https://www.kdd.org/kdd2016/papers/files/adp0945-xieA.pdf)
@@ -97,6 +105,10 @@
 
 
 ### Statistical Concepts
+* [Welcome Causal Inference](https://mixtape.scunning.com/)
+* [Generalized Additive Models in R · A Free Interactive Course](https://noamross.github.io/gams-in-r-course/)
+* [Incrementality Bidding & Attribution - YouTube](https://www.youtube.com/watch?v=pAIS0mG8ucM&feature=youtu.be)
+* [When should I apply data normalizationstandardization](https://sebastianraschka.com/faq/docs/when-to-standardize.html)
 * [Least squares as springs](https://joshualoftus.com/post/2020-11-23-least-squares-as-springs/least-squares-as-springs/)
 * [Create Tidy Data Frames of Marginal Effects for ggplot from Model Outputs • ggeffects](https://strengejacke.github.io/ggeffects/)
 * [Learning Statistics with R](https://learningstatisticswithr.com/)
